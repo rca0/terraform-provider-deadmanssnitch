@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
+	"github.com/rca0/terraform-deadmanssnitch/deadmanssnitch"
 )
 
 var version string
@@ -10,7 +11,7 @@ var version string
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
 		ProviderFunc: func() terraform.ResourceProvider {
-			return "substitute"
+			return deadmanssnitch.Provider(version)
 		},
 	})
 }
