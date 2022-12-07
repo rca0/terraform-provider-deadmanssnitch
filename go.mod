@@ -1,4 +1,4 @@
-module github.com/rca0/terraform-deadmanssnitch
+module github.com/rca0/terraform-provider-deadmanssnitch
 
 go 1.18
 

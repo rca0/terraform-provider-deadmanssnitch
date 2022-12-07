@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
 	"github.com/hashicorp/terraform-plugin-sdk/terraform"
-	"github.com/rca0/terraform-deadmanssnitch/deadmanssnitch"
+	"github.com/rca0/terraform-provider-deadmanssnitch/deadmanssnitch"
 )
 
 var version string
