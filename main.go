@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"github.com/hashicorp/terraform-plugin-sdk/plugin"
+	"github.com/hashicorp/terraform-plugin-sdk/terraform"
+)
+
+var version string
 
 func main() {
-	fmt.Print("Hello world!")
+	plugin.Serve(&plugin.ServeOpts{
+		ProviderFunc: func() terraform.ResourceProvider {
+			return "substitute"
+		},
+	})
 }
