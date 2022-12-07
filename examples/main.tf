@@ -1,3 +1,8 @@
+variable "deadmanssnitch_api_key" {
+  type        = string
+  description = "The Deadmanssnitch customer API KEY"
+}
+
 provider "deadmanssnitch" {
   // ENV VARS: DEADMANSSNITCH_APIKEY DEADMANSSNITCH_BASEURL 
   // baseurl = "https://api.deadmanssnitch.com/v1/snitches" (default value)
