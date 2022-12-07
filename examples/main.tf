@@ -31,3 +31,12 @@ resource "deadmanssnitch_snitch" "bar" {
     "terraform"
   ]
 }
+
+terraform {
+  required_providers {
+    deadmanssnitch = {
+      source  = "github.com/rca0/terraform-provider-deadmanssnitch"
+      version = "0.1.0"
+    }
+  }
+}
