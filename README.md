@@ -1,11 +1,19 @@
 # terraform-deadmanssnitch
 
+refs to create a new terraform-provider written in Go
+
+https://github.com/hashicorp/terraform-plugin-sdk
+https://developer.hashicorp.com/terraform/plugin
+
 ## WIP - NOT READY TO PRODUCTION
 
 Terraform provider based on deadmanssnitch API core system: https://deadmanssnitch.com/docs/api/v1
 
 Requirements:
-- API KEY
+- Deadmanssnitch API-KEY
+- Go 1.18+
+- Terraform v1.0.3+
+- Docker and Docker-Compose
 
 ## Terraform Provider Actions
 
