@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/84codes/go-api/api"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
 
@@ -41,6 +40,9 @@ func Provider(v string) *schema.Provider {
 func providerConfigure(d *schema.ResourceData) (interface{}, error) {
 	useragent := fmt.Sprintf("terraform-provider-deadmanssnitch_v%s", version)
 	log.Printf("[DEBUG] deadmanssnitch::provider::configure useragent: %v", useragent)
-	// TO-DO: get the api content and try to handle some error (if necessary)
-	return api.New(d.Get("baseurl").(string), d.Get("apikey").(string), useragent), nil
+
+	// TO-DO
+	// Create an API written in go for deadmanssnitch to call here
+	// ex:
+	// client err := deadmanssnitchapi.New(d.Get("apikey").string(), useragent)
 }
